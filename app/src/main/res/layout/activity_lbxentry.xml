@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999999"
+    tools:context=".LBXEntryActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-37dp"
+        tools:layout_editor_absoluteY="-150dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtLBXFacing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/facing"
+                android:textAlignment="center"
+                android:textColor="#ED000000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutFacing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLBXFacingLeft"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonFacingSelection"
+                    android:text="@string/facing_left"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnLBXFacingCenter"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonFacingSelection"
+                    android:text="@string/facing_center"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnLBXFacingRight"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonFacingSelection"
+                    android:text="@string/facing_right"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtWeaponSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/size"
+                android:textAlignment="center"
+                android:textColor="#ED000000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutWeaponSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLBXSize2"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonWeaponSelection"
+                    android:text="@string/LB_2_X"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnLBXSize5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonWeaponSelection"
+                    android:text="@string/LB_5_X"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnLBXSize10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonWeaponSelection"
+                    android:text="@string/LB_10_X"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnLBXSize20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonWeaponSelection"
+                    android:text="@string/LB_20_X"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLBXManualClusterRoll"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="80dp"
+                android:onClick="buttonManualClusterHits"
+                android:text="@string/manual_roll" />
+
+            <Button
+                android:id="@+id/btnLBXAutoCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="25dp"
+                android:onClick="buttonAutomaticClusterHits"
+                android:text="@string/calculate" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

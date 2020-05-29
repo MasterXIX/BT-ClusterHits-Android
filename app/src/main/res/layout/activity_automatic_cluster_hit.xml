@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999999"
+    tools:context=".AutomaticClusterHitActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/etxtNumWeapons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="@string/num_of_weapons"
+            android:importantForAutofill="no"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnAutoRollLocations"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#82FF65"
+            android:onClick="rollClusterHits"
+            android:text="@string/roll_hits" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="125dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/autoHeadRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAutoHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mech_head"
+                    android:textAlignment="center"
+                    android:textColor="#ED000000"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/autoHeadDataRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/txtAutoHeadHits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="false"
+                    android:gravity="start"
+                    android:text="@string/num_hits"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAutoHeadDamage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/damage"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:id="@+id/autoCTRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAutoCT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mech_ct"
+                    android:textAlignment="center"
+                    android:textColor="#ED000000"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/autoCTDataRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/txtAutoCTHits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="false"
+                    android:gravity="start"
+                    android:text="@string/num_hits"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAutoCTDamage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/damage"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:id="@+id/autoLTRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAutoLT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mech_lt"
+                    android:textAlignment="center"
+                    android:textColor="#ED000000"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/autoLTDataRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/txtAutoLTHits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="false"
+                    android:gravity="start"
+                    android:text="@string/num_hits"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAutoLTDamage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/damage"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:id="@+id/autoRTRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAutoRT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mech_rt"
+                    android:textAlignment="center"
+                    android:textColor="#ED000000"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/autoRTDataRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/txtAutoRTHits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="false"
+                    android:gravity="start"
+                    android:text="@string/num_hits"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAutoRTDamage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/damage"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:id="@+id/autoLARow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAutoLA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mech_la"
+                    android:textAlignment="center"
+                    android:textColor="#ED000000"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/autoLADataRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/txtAutoLAHits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="false"
+                    android:gravity="start"
+                    android:text="@string/num_hits"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAutoLADamage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/damage"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:id="@+id/autoRARow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAutoRA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mech_ra"
+                    android:textAlignment="center"
+                    android:textColor="#ED000000"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/autoRADataRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/txtAutoRAHits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="false"
+                    android:gravity="start"
+                    android:text="@string/num_hits"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAutoRADamage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/damage"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:id="@+id/autoLLRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAutoLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mech_ll"
+                    android:textAlignment="center"
+                    android:textColor="#ED000000"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/autoLLDataRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/txtAutoLLHits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="false"
+                    android:gravity="start"
+                    android:text="@string/num_hits"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAutoLLDamage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/damage"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <TableRow
+                android:id="@+id/autoRLRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAutoRL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mech_rl"
+                    android:textAlignment="center"
+                    android:textColor="#ED000000"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/autoRLDataRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/txtAutoRLHits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:freezesText="false"
+                    android:gravity="start"
+                    android:text="@string/num_hits"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtAutoRLDamage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/damage"
+                    android:textAlignment="viewStart"
+                    android:textColor="#ED000000"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:id="@+id/txtAutoTotalDamage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFBDBD"
+                android:text="@string/total_damage"
+                android:textAlignment="center"
+                android:textColor="#ED000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtAutoCrit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFBDBD"
+                android:text="@string/num_crits"
+                android:textAlignment="center"
+                android:textColor="#ED000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtAutoClusterRolls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFBDBD"
+                android:text="@string/auto_cluster_rolls"
+                android:textAlignment="center"
+                android:textColor="#ED000000"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

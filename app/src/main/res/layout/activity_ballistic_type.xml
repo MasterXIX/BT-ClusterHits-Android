@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BallisticTypeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BC000000"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnLBX"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/lb_x"
+            android:onClick="goToLBXDataActivity"
+            android:text="@string/lb_x" />
+
+        <Button
+            android:id="@+id/btnUAC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/ultra_auto_cannon"
+            android:onClick="goToUltraACActivity"
+            android:text="@string/UAC" />
+
+        <Button
+            android:id="@+id/btnSBGauss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/silver_bullet_gauss"
+            android:onClick="goToSBGDataActivity"
+            android:text="@string/silver_bullet_gauss" />
+
+        <Button
+            android:id="@+id/btnRAC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/rotary_auto_cannon"
+            android:onClick="goToRotaryACActivity"
+            android:text="@string/RAC" />
+
+        <Button
+            android:id="@+id/btnHAG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/hyper_assault_gauss"
+            android:onClick="goToHyperAssaultGaussActivity"
+            android:text="@string/HAG" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

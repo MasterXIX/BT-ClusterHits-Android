@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999999"
+    tools:context=".HyperAssaultGaussEntryActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtHAGFacing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/facing"
+                android:textAlignment="center"
+                android:textColor="#ED000000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnHAGFacingLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonFacingSelection"
+                    android:text="@string/facing_left"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnHAGFacingCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonFacingSelection"
+                    android:text="@string/facing_center"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnHAGFacingRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonFacingSelection"
+                    android:text="@string/facing_right"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtHAGRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/range"
+                android:textAlignment="center"
+                android:textColor="#ED000000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnHAGRangeShort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonRangeSelection"
+                    android:text="@string/range_short"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnHAGRangeMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonRangeSelection"
+                    android:text="@string/range_medium"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnHAGRangeLong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonRangeSelection"
+                    android:text="@string/range_long"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtHAGSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/size"
+                android:textAlignment="center"
+                android:textColor="#ED000000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnHAGSize20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonWeaponSelection"
+                    android:text="@string/HAG_20"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnHAGSize30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonWeaponSelection"
+                    android:text="@string/HAG_30"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnHAGSize40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonWeaponSelection"
+                    android:text="@string/HAG_40"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnHAGManualRoll"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="80dp"
+                android:onClick="buttonManualClusterHits"
+                android:text="@string/manual_roll" />
+
+            <Button
+                android:id="@+id/btnHAGAutoRoll"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:onClick="buttonAutomaticClusterHits"
+                android:text="@string/calculate" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

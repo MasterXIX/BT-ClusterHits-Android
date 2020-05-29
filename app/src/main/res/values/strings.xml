@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">BattleTech Cluster Hits</string>
+
+    <string name="Missile">Missile</string>
+    <string name="Ballistic">Ballistic</string>
+
+    !Missile Names
+    <string name="short_range_missile">Short Range Missile</string>
+    <string name="SRM">SRM</string>
+    <string name="medium_range_missile">Medium Range Missile</string>
+    <string name="MRM">MRM</string>
+    <string name="long_range_missile">Long Range Missile</string>
+    <string name="LRM">LRM</string>
+    <string name="advanced_tactical_missile">Advanced Tactical Missile</string>
+    <string name="ATM">ATM</string>
+
+    !Missile Weapons
+    <string name="SRM2">SRM 2</string>
+    <string name="SRM4">SRM 4</string>
+    <string name="SRM6">SRM 6</string>
+
+    <string name="MRM10">MRM 10</string>
+    <string name="MRM20">MRM 20</string>
+    <string name="MRM30">MRM 30</string>
+    <string name="MRM40">MRM 40</string>
+
+    <string name="LRM5">LRM 5</string>
+    <string name="LRM10">LRM 10</string>
+    <string name="LRM15">LRM 15</string>
+    <string name="LRM20">LRM 20</string>
+
+    <string name="ATM3">ATM 3</string>
+    <string name="ATM6">ATM 6</string>
+    <string name="ATM9">ATM 9</string>
+    <string name="ATM12">ATM 12</string>
+    <string name="atmMissileType">Missile Type</string>
+    <string name="HEMissile">HE</string>
+    <string name="STDMissile">STD</string>
+    <string name="ERMissile">ER</string>
+
+    !Ballistic Names
+    <string name="lb_x">LB-X</string>
+    <string name="ultra_auto_cannon">Ultra Auto Cannon</string>
+    <string name="UAC">UAC</string>
+    <string name="rotary_auto_cannon">Rotary Auto Cannon</string>
+    <string name="RAC">RAC</string>
+    <string name="silver_bullet_gauss">Silver Bullet Gauss</string>
+    <string name="SB_Gauss">S.B. Gauss</string>
+    <string name="hyper_assault_gauss">Hyper Assault Gauss</string>
+    <string name="HAG">HAG</string>
+
+    !Ballistic Weapons
+    <string name="LB_2_X">LB 2-X</string>
+    <string name="LB_5_X">LB 5-X</string>
+    <string name="LB_10_X">LB 10-X</string>
+    <string name="LB_20_X">LB 20-X</string>
+
+    <string name="ultra_ac2">UAC/2</string>
+    <string name="ultra_ac5">UAC/5</string>
+    <string name="ultra_ac10">UAC/10</string>
+    <string name="ultra_ac20">UAC/20</string>
+
+    <string name="RAC_2">RAC/2</string>
+    <string name="RAC_5">RAC/5</string>
+
+    <string name="HAG_20">HAG 20</string>
+    <string name="HAG_30">HAG 30</string>
+    <string name="HAG_40">HAG 40</string>
+
+
+    !Calculation Activity strings
+    <string name="facing">Facing</string>
+    <string name="facing_left">L</string>
+    <string name="facing_right">R</string>
+    <string name="facing_center">C(R)</string>
+
+    <string name="range">Range</string>
+    <string name="range_short">Short</string>
+    <string name="range_medium">Medium</string>
+    <string name="range_long">Long</string>
+
+    <string name="size">Size</string>
+    <string name="size_2">2</string>
+    <string name="size_4">4</string>
+    <string name="size_6">6</string>
+    <string name="size_5">5</string>
+    <string name="size_10">10</string>
+    <string name="size_15">15</string>
+    <string name="size_20">20</string>
+    <string name="size_3">3</string>
+    <string name="size_9">9</string>
+    <string name="size_12">12</string>
+    <string name="size_30">30</string>
+    <string name="size_40">40</string>
+
+    <string name="manual_roll">Manual Cluster Hits Roll</string>
+    <string name="num_of_weapons"># of Weapons to fire: </string>
+    <string name="num_of_weapons_entry">#</string>
+    <string name="calculate">Automatically Roll Cluster Hits</string>
+    <string name="title_activity_lbxdata">LBXDataActivity</string>
+    <string name="roll_hits">Roll Locations</string>
+    <string name="enter_roll">Enter Cluster Roll (2 - 12)</string>
+    <string name="racs_fired">RAC Rounds Fired: </string>
+
+    !Mech Hit locations
+    <string name="mech_head">Head</string>
+    <string name="mech_ct">Center Torso</string>
+    <string name="mech_lt">Left Torso</string>
+    <string name="mech_rt">Right Torso</string>
+    <string name="mech_ra">Right Arm</string>
+    <string name="mech_la">Left Arm</string>
+    <string name="mech_rl">Right Leg</string>
+    <string name="mech_ll">Left Leg</string>
+
+    !Cluster chart text
+    <string name="num_hits">Hits: </string>
+    <string name="damage">Damage: </string>
+    <string name="num_crits">Through Armor Criticals: </string>
+    <string name="not_calculated">N/A</string>
+    <string name="total_damage">Total Damage Dealt: </string>
+    <string name="auto_cluster_rolls">Automatically Generated Cluster Rolls:
+    </string>
+
+    //Missile Cluster Modifier types
+    <string name="amsBox">AMS Present?</string>
+    <string name="ECMBox">ECM Present?</string>
+    <string name="AngelBox">Angel ECM Present?</string>
+    <string name="ApolloBox">Apollo FCS Present?</string>
+    <string name="streakBox">Streak Ammo?</string>
+    <string name="narcBox">Narc Capable Ammo?</string>
+    <string name="ArtIVBox">Artemis IV Ammo?</string>
+    <string name="ArtVBox">Artemis V Ammo?</string>
+    <string name="indirectFire">Indirect Fire?</string>
+
+</resources>

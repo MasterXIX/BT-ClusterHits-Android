@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999999"
+    tools:context=".SIlverBulletGaussEntryActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtSBGFacing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/facing"
+                android:textAlignment="center"
+                android:textColor="#ED000000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSBGFacingLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonFacingSelection"
+                    android:text="@string/facing_left" />
+
+                <Button
+                    android:id="@+id/btnSBGFacingCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonFacingSelection"
+                    android:text="@string/facing_center" />
+
+                <Button
+                    android:id="@+id/btnSBGFacingRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonFacingSelection"
+                    android:text="@string/facing_right" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSBGManualRoll"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="50dp"
+                android:onClick="buttonManualClusterHits"
+                android:text="@string/manual_roll"
+                android:textColor="#ED000000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnSBGAutoClusterRoll"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="80dp"
+                android:onClick="buttonAutomaticClusterHits"
+                android:text="@string/calculate" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

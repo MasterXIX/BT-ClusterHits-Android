@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MissileTypeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BC000000"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnLBX"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/short_range_missile"
+            android:onClick="goToSRM"
+            android:text="@string/SRM" />
+
+        <Button
+            android:id="@+id/btnUAC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/medium_range_missile"
+            android:onClick="goToMRM"
+            android:text="@string/MRM" />
+
+        <Button
+            android:id="@+id/btnSBGauss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/long_range_missile"
+            android:onClick="goToLRM"
+            android:text="@string/LRM" />
+
+        <Button
+            android:id="@+id/btnRAC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/advanced_tactical_missile"
+            android:onClick="goToATM"
+            android:text="@string/ATM" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
