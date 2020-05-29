@@ -1,0 +1,12 @@
+This Android app was developed by Christopher Deale originally.
+
+To install:
+  -Install Android Studios
+  -Clone the repository
+  -input the repo files as an Android Studios project
+  -Enable Developer options and USB debugging on your phone
+  -Plug the phone into the computer using USB cord
+  -Select the phone as the target VM/Machine in Android Studios
+  -Build and run the application
+  
+Congrats, the application has been built and added to your phone!
